@@ -1,4 +1,7 @@
 spring:
+  jackson:
+    generator:
+      write-bigdecimal-as-plain: true
   application:
     name: order-service
 
