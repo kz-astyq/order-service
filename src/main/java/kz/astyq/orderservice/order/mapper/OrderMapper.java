@@ -1,6 +1,7 @@
 package kz.astyq.orderservice.order.mapper;
 
 import kz.astyq.orderservice.order.model.dto.OrderCreateRequest;
+import kz.astyq.orderservice.order.model.dto.OrderViewResponse;
 import kz.astyq.orderservice.order.model.entity.Order;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
@@ -23,4 +24,6 @@ public interface OrderMapper {
     @Mapping(target = "createdAt", ignore = true)
     @Mapping(target = "updatedAt", ignore = true)
     Order toEntity(OrderCreateRequest request);
+    
+    OrderViewResponse toViewResponse(Order order);
 }
